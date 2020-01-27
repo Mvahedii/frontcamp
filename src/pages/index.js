@@ -5,12 +5,12 @@ import Posts from '../component/posts/posts'
 
 const IndexPage = () => {
   return (
-    <>
+    <React.Fragment>
       <Navbar />
-      <Posts/>
-      <Posts/>
-      <Posts/>
-   </> 
+      <Posts />
+      <Posts />
+      <Posts />
+    </React.Fragment>
   )
 }
 
