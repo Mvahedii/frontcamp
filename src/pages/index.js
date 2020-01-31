@@ -6,7 +6,6 @@ import Navbar from '../component/navbar/navbar'
 import Posts from '../component/posts/posts'
 
 const IndexPage = (props) => {
-  console.log(props)
   return (
     <React.Fragment>
       <Navbar />
@@ -15,6 +14,7 @@ const IndexPage = (props) => {
           <Posts
             key={edge.node.childMarkdownRemark.id}
             title={edge.node.childMarkdownRemark.frontmatter.title}
+            expert
           />
         )
         )

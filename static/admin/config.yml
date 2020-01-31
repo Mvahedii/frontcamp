@@ -14,7 +14,7 @@ collections:
         file: "content/home.md"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Excerpt, name: excerpt, widget: string }
+          - { label: Summary, name: summary, widget: string }
           - { label: Intro text, name: intro, widget: text }
           - { label: Image, name: image, widget: image }
           - label: "Time to Read"
