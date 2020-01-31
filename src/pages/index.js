@@ -10,9 +10,15 @@ const IndexPage = (props) => {
   return (
     <React.Fragment>
       <Navbar />
-      <Posts />
-      <Posts />
-      <Posts />
+      {
+        props.data.allFile.edges.map(edge => (
+          <Posts
+            key={edge.node.childMarkdownRemark.id}
+            title={edge.node.childMarkdownRemark.frontmatter.title}
+          />
+        )
+        )
+      }
     </React.Fragment>
   )
 }
@@ -25,14 +31,12 @@ export const query = graphql`
           childMarkdownRemark {
             frontmatter {
               title
-              intro
-              image
           }
+          id
         }
       }
     }
   }
 }`
-
 
 export default IndexPage;

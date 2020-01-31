@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { Link } from 'gatsby'
-
 import './posts.css'
 
 const Posts = () => {
