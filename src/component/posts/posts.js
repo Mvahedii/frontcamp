@@ -1,19 +1,23 @@
 import React from 'react'
 
+import { toPersian } from '../../utils/toPersian'
+
 import './posts.css'
 
-const Posts = (props) => {
-    console.log(props)
+const Posts = ({ title, summary, time }) => {
+
+    const persianTime = toPersian(time)
+
     return (
         <div className='box'>
             <div className='card-title'>
-                <h3> </h3>
+                <h3> {title} </h3>
             </div>
             <div className='card-description'>
-                <p></p>
+                <p> {summary} </p>
             </div>
             <div className='card-footer'>
-                <span></span>
+                <span>خواندن {persianTime} دقیقه </span>
             </div>
         </div>
     )

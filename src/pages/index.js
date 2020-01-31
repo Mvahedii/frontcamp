@@ -14,7 +14,8 @@ const IndexPage = (props) => {
           <Posts
             key={edge.node.childMarkdownRemark.id}
             title={edge.node.childMarkdownRemark.frontmatter.title}
-            expert
+            summary={edge.node.childMarkdownRemark.frontmatter.summary}
+            time={edge.node.childMarkdownRemark.frontmatter.time}
           />
         )
         )
@@ -31,6 +32,8 @@ export const query = graphql`
           childMarkdownRemark {
             frontmatter {
               title
+              summary
+              time
           }
           id
         }
