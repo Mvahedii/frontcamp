@@ -9,9 +9,9 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
-      - label: "Home Page"
-        name: "home"
-        file: "content/home.md"
+      - label: "SSG Concept"
+        name: "ssg-concept"
+        file: "content/ssg-concept.md"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Summary, name: summary, widget: string }

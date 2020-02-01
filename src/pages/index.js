@@ -26,7 +26,7 @@ const IndexPage = (props) => {
 
 export const query = graphql`
   query {
-    allFile (filter: {sourceInstanceName: {eq: "content"} name: {eq: "home"}}) {
+    allFile (filter: {sourceInstanceName: {eq: "content"} name: {eq: "ssg-concept"}}) {
       edges {
         node {
           childMarkdownRemark {
