@@ -1,17 +1,22 @@
 import React from 'react'
 
+import { Link } from 'gatsby'
+
 import { toPersian } from '../../utils/toPersian'
 
 import './posts.css'
 
-const Posts = ({ title, summary, time }) => {
+const Posts = ({ title, summary, time, slug }) => {
 
     const persianTime = toPersian(time)
 
     return (
         <div className='box'>
             <div className='card-title'>
-                <h3> {title} </h3>
+                <Link to={slug} id='link'>
+                    <h3> {title} </h3>
+                </Link>
+
             </div>
             <div className='card-description'>
                 <p> {summary} </p>

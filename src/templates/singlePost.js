@@ -15,7 +15,7 @@ const SinglePost = (props) => {
             <Navbar />
             <div className='article'>
                 <div className='article-image'>
-                    <img src={data.image} alt={data.title} />
+                    <img src={`../${data.image}`} alt={data.title} />
                 </div>
                 <div className='article-title'>
                     <h3>{data.title}</h3>

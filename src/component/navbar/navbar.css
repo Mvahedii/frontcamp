@@ -22,6 +22,11 @@
   padding-bottom: 0;
 }
 
+#link {
+  text-decoration: none;
+  color:black
+}
+
 body {
   display: flex;
   justify-content: center;

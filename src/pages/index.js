@@ -6,18 +6,25 @@ import Navbar from '../component/navbar/navbar'
 import Posts from '../component/posts/posts'
 
 const IndexPage = (props) => {
+  
+  const allData = props.data.allFile.edges;
+
   return (
     <React.Fragment>
       <Navbar />
       {
-        props.data.allFile.edges.map(edge => (
-          <Posts
-            key={edge.node.childMarkdownRemark.id}
-            title={edge.node.childMarkdownRemark.frontmatter.title}
-            summary={edge.node.childMarkdownRemark.frontmatter.summary}
-            time={edge.node.childMarkdownRemark.frontmatter.time}
-          />
-        )
+        allData.map(data => {
+          const detail = data.node.childMarkdownRemark
+          return (
+            <Posts
+              key={detail.id}
+              title={detail.frontmatter.title}
+              summary={detail.frontmatter.summary}
+              time={detail.frontmatter.time}
+              slug={detail.fields.slug}
+            />
+          )
+        }
         )
       }
     </React.Fragment>
@@ -36,6 +43,9 @@ export const query = graphql`
               time
           }
           id
+          fields{
+            slug
+          }
         }
       }
     }
