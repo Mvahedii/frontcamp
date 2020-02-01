@@ -3,6 +3,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Navbar from '../component/navbar/navbar'
+import SEO from '../component/seo/SEO'
 
 import './singlePost.css'
 
@@ -12,6 +13,7 @@ const SinglePost = (props) => {
 
     return (
         <React.Fragment>
+            <SEO />
             <Navbar />
             <div className='article'>
                 <div className='article-image'>
