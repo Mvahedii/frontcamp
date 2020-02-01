@@ -1,0 +1,33 @@
+.article {
+  width: 640px;
+  height: 100px;
+  margin: 20px;
+}
+
+body {
+  display: flex;
+  text-align: justify;
+  font-family: Tanha;
+  direction: rtl;
+}
+
+.article-image {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.article-intro {
+  margin-bottom: 150px;
+}
+
+@font-face {
+  font-family: Tanha;
+  src: url("../fonts/Tanha.eot");
+  src: url("../fonts/Tanha.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Tanha.woff") format("woff"),
+    url("../fonts/Tanha.ttf") format("truetype");
+  font-weight: normal;
+}
+
+
